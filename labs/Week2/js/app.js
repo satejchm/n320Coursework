@@ -1,6 +1,6 @@
 //Sarah Tejchma
 //N320
-//September 5, 2019
+//September 5, 2019 due september 12
 
 //create drop class for rain drops
 class Drop {
@@ -30,7 +30,7 @@ class Ground {
     //set coordinates for rectangle
     this.x = 0;
     this.y = 275;
-    this.blueStart = 0;
+    this.blueStart = 13;
 
     //set starting color at 5 percent blue
     //set drop hit
@@ -42,16 +42,16 @@ class Ground {
     rect(this.x, this.y, 400, 25);
   }
 
-  //drop hit called when a rain drop gets low enough (how do you inform it?)
+  //drop hit called when a rain drop gets low enough
   counter() {
     hit++;
 
+    //create statement so that when ten drops hit, the blue start color is increased by 5 percent (255*.05 = 13 which is 5 percent)
     if (hit >= 10) {
       hit = 0;
-      this.blueStart = this.blueStart + 25;
+      this.blueStart = this.blueStart + 13;
     }
   }
-  //change color for every ten raindrops hit
 }
 
 class RainManager {
@@ -71,17 +71,7 @@ class RainManager {
     for (var i = 0; i < this.drops.length; i++) {
       this.drops[i].update();
     }
-
-    //countDrop() {
-    //this.drops.foreach(function(newDrop) {
-    //if (this.drops > 275 && this.drops ==10) {
-    //this.drops--;
-    // this.fill(0, 0, c=5+5);
-    //}
-    //})
   }
-
-  //count rain drops
 }
 
 //global variables
@@ -99,8 +89,8 @@ function setup() {
 function draw() {
   //clear background
   background(255);
-  //create new drop on a 5 percent chance
-  if (Math.random() < 0.05 && stopRain < 25) {
+  //create new drop on a 5 percent chance as well as stopping the rain(getting rid of rain for each ten drops)
+  if (Math.random() < 0.05 && stopRain < 20) {
     stopRain++;
 
     rainManager.createDrop();
