@@ -11,26 +11,27 @@ class Ball {
   }
 
   update() {
-    //code below shows
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
 
-    //code below
+    //code below is the code to draw the circle on the page(have to put circle update in draw function to work)
     circle(this.position.x, this.position.y, 20);
 
     //this shows that if the ball goes out of bounds
     if (this.position.x < 0 || this.position.x > 400) {
       World.ballBeyond(this);
 
+      //this listens so that if the ball goes out of bounds the rectangles increase in size
       newBox.bounds();
       newBox2.bounds();
     }
   }
 }
 
-//singleton
+//observing for ball to make changes
 var World = {
   bgcolor: [237, 119, 83],
+  //listener
   ballBeyond: function(whichBall) {
     this.bgcolor = [Math.random() * 255, Math.random() * 255, 83];
     whichBall.position.x = 100;
@@ -39,6 +40,8 @@ var World = {
 };
 
 //class for a box
+//the box is an observer as well because the bounds function is inside the ball waiting for when the ball is out of bounds
+//when ball is out of bounds, the boxes increase in size
 class Box {
   constructor(x, y) {
     this.x = x;
@@ -47,6 +50,7 @@ class Box {
   }
 
   update() {
+    //creates rectangle to be used in draw function
     fill(0, 0, 50);
     rectMode("center");
     rect(this.x, this.y, this.size, this.size);
