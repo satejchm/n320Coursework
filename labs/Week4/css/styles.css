@@ -1,0 +1,113 @@
+#longRect {
+  width: 950px;
+  height: 140px;
+  background-color: rgb(21, 21, 90);
+  animation: longRectBuildIn 0.7s;
+  animation-fill-mode: both;
+}
+
+h1 {
+  margin-left: 50px;
+  font-family: Calibri;
+  font-size: 280%;
+  color: rgb(21, 21, 90);
+  animation: h1BuildIn 0.7s;
+  animation-fill-mode: both;
+}
+
+.card {
+  background-color: purple;
+  width: 250px;
+  height: 150px;
+  margin: 10px 10px 10px 10px;
+  animation: cardBuildIn 1s;
+  animation-fill-mode: both;
+}
+
+#cardHolder {
+  display: flex;
+  flex-flow: row wrap;
+  width: 1000px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.cardOver {
+  animation: cardOverAnim 0.7s;
+  animation-fill-mode: both;
+}
+
+.cardOut {
+  animation: cardOutAnim 0.7s;
+  animation-fill-mode: both;
+}
+
+.cardClick {
+  animation: cardClickAnim 0.7s;
+  animation-fill-mode: both;
+}
+
+@keyframes longRectBuildIn {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes h1BuildIn {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cardBuildIn {
+  from {
+    opacity: 0;
+    transform: scale(0.2) rotateZ(100deg) rotateX(100deg);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cardOverAnim {
+  to {
+    opacity: 1;
+    background-color: rgb(255, 0, 179);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes cardOutAnim {
+  from {
+    opacity: 1;
+    transform: scale(1.2);
+    background-color: rgb(70, 154, 250);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    background-color: purple;
+  }
+}
+
+@keyframes cardClickAnim {
+  from {
+    opacity: 1;
+    transform: scale(1.2);
+    background-color: red;
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1) rotateZ(180deg) rotateX(180deg);
+  }
+}
