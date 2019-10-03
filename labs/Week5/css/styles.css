@@ -1,0 +1,54 @@
+body {
+  width: 100%;
+  background-color: black;
+}
+.student {
+  cursor: pointer;
+  color: red;
+  font-size: 45px;
+  width: 250px;
+  height: 300px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 16px;
+}
+
+.leftArrow {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #7ecfc0;
+  margin-bottom: 16px;
+}
+
+.rightArrow {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #7ecfc0;
+}
+
+.cardActive {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.cardOut {
+  transition: transform 0.3 ease, opacity 0.3s ease;
+  transform: rotate(45deg);
+  opacity: 0;
+}
