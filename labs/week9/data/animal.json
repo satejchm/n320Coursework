@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "type": "five animals"
+  },
+
+  "animal": [
+    {
+      "name": "dog",
+      "rating": "amazing",
+      "happiness": true,
+      "weight": 80,
+      "types": ["german shepherd", "husky", "labrador retriever"]
+    },
+    {
+      "name": "cat",
+      "rating": "good",
+      "happiness": false,
+      "weight": 15,
+      "types": ["siamese", "dwarf", "main coon"]
+    },
+    {
+      "name": "fish",
+      "rating": "okay",
+      "happiness": true,
+      "weight": 1,
+      "types": ["beta", "goldfish", "coi"]
+    },
+    {
+      "name": "bird",
+      "rating": "okay",
+      "happiness": false,
+      "weight": 5,
+      "types": ["parrot", "parakeet", "morning lark"]
+    },
+    {
+      "name": "horse",
+      "rating": "awesome",
+      "happiness": true,
+      "weight": 1500,
+      "types": ["mustang", "shire", "barb"]
+    }
+  ]
+}
