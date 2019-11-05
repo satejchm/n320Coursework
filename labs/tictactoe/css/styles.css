@@ -1,0 +1,79 @@
+/*below is style sheet for each piece of the gameboard */
+
+#app {
+  background-color: #4a41cc;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  padding-top: 30px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.gameArea {
+  background-color: #4a41cc;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-top: 10px;
+  height: 375px;
+}
+
+.title {
+  background-color: #4a41cc;
+  width: 400px;
+  margin: 0 auto;
+  font-family: "Staatliches", cursive;
+  font-size: 80px;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 40px;
+  display: flex;
+  color: #7dc3ff;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7dc3ff;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+  border-bottom: 1px;
+  font-family: "Staatliches", cursive;
+  font-size: 100px;
+  color: white;
+}
+
+.gameOver {
+  background-color: #ffac82;
+  color: white;
+  width: 360px;
+  font-size: 80px;
+  justify-content: center;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 auto;
+  font-family: "Staatliches", cursive;
+}
+
+.oWin,
+.xWin {
+  background-color: #ffac82;
+  color: white;
+  width: 360px;
+  font-size: 40px;
+  justify-content: center;
+  border-radius: 10px;
+  display: flex;
+  margin: 0 auto;
+  font-family: "Staatliches", cursive;
+}
